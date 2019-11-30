@@ -5,11 +5,16 @@
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)，并通过如下命令安装：
 * sudo dpkg -i v2ray-4.21.3-amd64.deb
+
 安装后将显示随机生成的端口号和用户ID，并将其填入手机或PC端的v2ray客户端，额外ID（alterId）为64。
+
 上述配置信息都保存在/etc/v2ray/config.json中，安装完成后会自动启动v2ray服务。
+
 您可以在安装完成后通过修改文件/etc/v2ray/config.json来自定义端口号和用户ID等配置信息。
+
 修改配置文件后须重启v2ray服务使之生效：
 * sudo systemctl restart v2ray
+
 生成用户ID（UUID）的方法：
 * cat /proc/sys/kernel/random/uuid
 ## 卸载
