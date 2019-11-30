@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl stop v2ray
+systemctl disable v2ray
+rm -rf /var/log/v2ray

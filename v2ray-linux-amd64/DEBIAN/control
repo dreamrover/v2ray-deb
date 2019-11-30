@@ -1,0 +1,15 @@
+Package: v2ray
+Version: 4.21.3
+Architecture: amd64
+Maintainer: dreamrover
+Pre-depends: 
+Depends: 
+Recommends: 
+Installed-Size: 32336
+Section: net
+Priority: extra
+Homepage: https://github.com/v2ray/v2ray-core
+Suggests:
+Provides: v2ray, v2ctl
+Description: Project V
+ Project V is a set of network tools that help you to build your own computer network. It secures your network connections and thus protects your privacy. See our website for more information.
