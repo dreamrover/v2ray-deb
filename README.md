@@ -4,7 +4,7 @@
 本项目将其打包成Debian/Ubuntu系统上的deb安装包（仅支持64位系统），使您能一键部署v2ray服务端，默认使用VMESS协议，安装后自动随机生成端口号和用户ID，您也可以在安装之后修改默认配置文件/etc/v2ray/config.json来重置端口号和用户ID。
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)，并通过如下命令安装：
-* sudo dpkg -i v2ray-4.22.0-amd64.deb
+* sudo dpkg -i v2ray-4.22.1-amd64.deb
 
 安装后将显示**随机生成的端口号**和**用户ID**，并将其填入手机或PC端的v2ray客户端，**额外ID（alterId）为64**。
 
