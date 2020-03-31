@@ -6,7 +6,9 @@
 
 配置文件位于/etc/v2ray目录下，服务端和客户端配置文件分别为server.json和client.json，安装完成后默认配置为服务端，创建指向server.json的符号链接文件config.json。您也可以在安装之后修改默认配置文件来重置端口号和用户ID，也可以修改符号链接文件/etc/v2ray/config.json的指向来将其作为客户端使用。
 
-作为服务端时，安装完成后自动生成的端口号为TCP端口号，同时也是基于UDP的mKCP的端口号，UUID相同，您可以在与此服务端连接的客户端使用TCP或mKCP，但不建议您使用mKCP，因为用了之后此端口和IP很快会被探测到进而被封，原因你懂的。另外，安装完成后服务端也默认支持基于UDP的QUIC协议传输，端口号为前述自动生成的端口号加1，UUID相同，key也与UUID相同，同样不建议您使用QUIC，原因与mKCP相同，虽然这两个基于UDP的协议速度更快。服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC；客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息。
+作为服务端时，安装完成后自动生成的端口号为TCP端口号，同时也是基于UDP的mKCP的端口号，UUID相同，您可以在与此服务端连接的客户端使用TCP或mKCP，但不建议您使用mKCP，因为用了之后此端口和IP很快会被探测到进而被封，原因你懂的。另外，安装完成后服务端也默认支持基于UDP的QUIC协议传输，端口号为前述自动生成的端口号加1，UUID相同，key也与UUID相同，同样不建议您使用QUIC，原因与mKCP相同，虽然这两个基于UDP的协议速度更快。
+
+服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC；客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息。
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)：
 * wget https://github.com/dreamrover/v2ray-deb/releases/download/4.23.1/v2ray-4.23.1-amd64.deb
