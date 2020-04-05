@@ -2,7 +2,7 @@
 ## 简介
 科学上网工具[Project V](https://www.v2ray.com/)的Linux服务端/客户端配置比较复杂，而官网[v2ray-core releases](https://github.com/v2ray/v2ray-core/releases)仅提供了各平台的二进制压缩包，安装部署比较麻烦。
 
-本项目将其打包成Debian/Ubuntu系统上的deb安装包（仅支持64位系统），使您能一键部署v2ray的Linux服务端/客户端，默认使用VMESS协议，安装后自动随机生成端口号和用户ID。
+本项目将其打包成Debian/Ubuntu系统上的deb安装包（仅提供x86_64版，如需其他CPU平台的安装包请[自行打包](https://github.com/dreamrover/v2ray-deb#%E8%87%AA%E8%A1%8C%E6%89%93%E5%8C%85)），使您能一键部署v2ray的Linux服务端/客户端，默认使用VMESS协议，安装后自动随机生成端口号和用户ID。
 
 配置文件位于/etc/v2ray目录下，服务端和客户端配置文件分别为server.json和client.json，安装完成后默认配置为服务端，创建指向server.json的符号链接文件config.json。您也可以在安装之后修改默认配置文件来重置端口号和用户ID，也可以修改符号链接文件/etc/v2ray/config.json的指向来将其作为客户端使用。
 
