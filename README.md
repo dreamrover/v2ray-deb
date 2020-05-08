@@ -41,4 +41,4 @@
 * chmod +x build.sh
 * ./build.sh
 
-如果您需要其他CPU平台的deb安装包，请前官网下载对应的二进制压缩包，并替换此项目中usr/bin/v2ray目录下的可执行文件v2ray和v2ctl，然后安照上述命令生成。
+如果您需要其他CPU平台的deb安装包，请前官网下载对应的二进制压缩包，并替换此项目中usr/bin/v2ray目录下的可执行文件v2ray和v2ctl，然后按照上述命令生成。
