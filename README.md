@@ -11,7 +11,7 @@
 服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC。客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息，inbounds中的本地socks5代理为1080端口，HTTP代理为8080端口；outbounds中的端口号和UUID与服务端相同。
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)：
-* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.23.1/v2ray-4.23.1-amd64.deb
+* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.23.2/v2ray-4.23.2-amd64.deb
 
 并通过如下命令安装：
 * sudo dpkg -i v2ray-4.23.1-amd64.deb
