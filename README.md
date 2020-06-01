@@ -14,7 +14,7 @@
 * wget https://github.com/dreamrover/v2ray-deb/releases/download/4.23.2/v2ray-4.23.2-amd64.deb
 
 并通过如下命令安装：
-* sudo dpkg -i v2ray-4.23.1-amd64.deb
+* sudo dpkg -i v2ray-4.23.2-amd64.deb
 
 安装后将显示**随机生成的端口号**和**用户ID（UUID）**，并将其填入手机或PC端的v2ray客户端，**额外ID（alterId）为64**。
 
