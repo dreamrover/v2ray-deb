@@ -1,16 +1,29 @@
 #!/bin/bash
 
 mkdir -p /var/log/v2ray
-PORT=$((1000 + RANDOM))
-PORT1=$((PORT + 1))
-sed -i "s/\"port\":\ 10086/\"port\":\ ${PORT}/g" "/etc/v2ray/server.json"
-sed -i "s/\"port\":\ 10087/\"port\":\ ${PORT1}/g" "/etc/v2ray/server.json"
-sed -i "s/\"port\":\ 10086/\"port\":\ ${PORT}/g" "/etc/v2ray/client.json"
-UUID=$(cat /proc/sys/kernel/random/uuid)
-sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/server.json"
-sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/client.json"
-ln -s /etc/v2ray/server.json /etc/v2ray/config.json
+
+if ! ls /etc/v2ray | grep .json.dpkg-dist ; then
+  PORT=$((1000 + RANDOM))
+  PORT1=$((PORT + 1))
+  sed -i "s/\"port\":\ 10086/\"port\":\ ${PORT}/g" "/etc/v2ray/server.json"
+  sed -i "s/\"port\":\ 10087/\"port\":\ ${PORT1}/g" "/etc/v2ray/server.json"
+  sed -i "s/\"port\":\ 10086/\"port\":\ ${PORT}/g" "/etc/v2ray/client.json"
+  UUID=$(cat /proc/sys/kernel/random/uuid)
+  sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/server.json"
+  sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/client.json"
+  echo "port: $PORT"
+  echo "id: $UUID"
+fi
+
+cd /etc/v2ray
+
+if [ -f /etc/v2ray/config.json ]; then
+  ln -is server.json config.json
+else
+  ln -s server.json config.json
+fi
+
+rm *.json.dpkg-dist
+
 systemctl enable v2ray
 systemctl start v2ray
-echo "port: $PORT"
-echo "id: $UUID"

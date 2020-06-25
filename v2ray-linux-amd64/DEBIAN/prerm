@@ -1,5 +1,5 @@
 #!/bin/bash
 
+unlink /etc/v2ray/config.json
 systemctl stop v2ray
 systemctl disable v2ray
-rm -rf /var/log/v2ray

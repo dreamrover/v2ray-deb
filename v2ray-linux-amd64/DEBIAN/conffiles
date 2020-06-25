@@ -1,0 +1,3 @@
+/etc/v2ray/client.json
+/etc/v2ray/server.json
+/etc/systemd/system/v2ray.service
