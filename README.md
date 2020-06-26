@@ -11,12 +11,12 @@
 服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC。客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息，inbounds中的本地socks5代理为1080端口，HTTP代理为8080端口；outbounds中的端口号和UUID与服务端相同。
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)：
-* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.25.0/v2ray-4.25.0-amd64.deb
+* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.25.1/v2ray-4.25.1-amd64.deb
 
 并通过如下命令安装：
-* sudo dpkg -i v2ray-4.25.0-amd64.deb
+* sudo dpkg -i v2ray-4.25.1-amd64.deb
 
-安装后将显示**随机生成的端口号**和**用户ID（UUID）**，并将其填入手机或PC端的v2ray客户端，**额外ID（alterId）为64**。
+首次安装后将显示**随机生成的端口号**和**用户ID（UUID）**，**额外ID（alterId）为64**。若已安装过旧版本，会提示是否替换之前的配置文件，如果选择“N”则不会重新生成端口号和UUID。将上述信息填入手机或PC端的v2ray客户端。
 
 上述配置信息都保存在/etc/v2ray/config.json中（此文件为符号链接，指向同目录下的server.json），安装完成后会自动启动v2ray服务。
 
@@ -32,8 +32,12 @@
 * sudo unlink /etc/v2ray/config.json
 * sudo ln -s /etc/v2ray/client.json /etc/v2ray/config.json
 ## 卸载
-您可通过如下命令卸载：
+您可通过如下命令卸载（ 保留配置文件和日志）：
 * sudo dpkg -r v2ray
+或者
+* sudo apt-get remove v2ray
+完全卸载（ 移除配置文件和日志）：
+* sudo apt-get purge v2ray
 ## 自行打包
 您也可以自行打包生成deb安装包（AMD64）：
 * git clone https://github.com/dreamrover/v2ray-deb.git

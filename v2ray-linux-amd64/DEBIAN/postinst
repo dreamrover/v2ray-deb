@@ -11,8 +11,11 @@ if ! ls /etc/v2ray | grep .json.dpkg-dist ; then
   UUID=$(cat /proc/sys/kernel/random/uuid)
   sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/server.json"
   sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/client.json"
+  systemctl enable v2ray
   echo "port: $PORT"
   echo "id: $UUID"
+else
+  rm /etc/v2ray/*.json.dpkg-dist
 fi
 
 cd /etc/v2ray
@@ -23,7 +26,4 @@ else
   ln -s server.json config.json
 fi
 
-rm *.json.dpkg-dist
-
-systemctl enable v2ray
 systemctl start v2ray
