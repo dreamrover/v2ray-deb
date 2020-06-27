@@ -32,13 +32,13 @@
 * sudo unlink /etc/v2ray/config.json
 * sudo ln -s /etc/v2ray/client.json /etc/v2ray/config.json
 ## 卸载
-您可通过如下命令卸载（ 保留配置文件和日志）：
+您可通过如下命令卸载（保留配置文件和日志）：
 * sudo dpkg -r v2ray
 
 或者
 * sudo apt-get remove v2ray
 
-完全卸载（ 移除配置文件和日志）：
+完全卸载（移除配置文件和日志）：
 * sudo apt-get purge v2ray
 ## 自行打包
 您也可以自行打包生成deb安装包（AMD64）：
