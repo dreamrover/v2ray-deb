@@ -1,11 +1,11 @@
 Package: v2ray
-Version: 4.25.1
+Version: 4.26.0
 Architecture: amd64
 Maintainer: dreamrover
 Pre-depends: 
 Depends: 
 Recommends: 
-Installed-Size: 34936
+Installed-Size: 34856
 Section: net
 Priority: extra
 Homepage: https://github.com/v2ray/v2ray-core
