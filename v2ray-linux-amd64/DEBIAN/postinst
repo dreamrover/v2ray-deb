@@ -13,8 +13,6 @@ if ! ls /etc/v2ray | grep .json.dpkg-dist ; then
   sed -i "s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g" "/etc/v2ray/client.json"
   echo "port: $PORT"
   echo "id: $UUID"
-else
-  rm /etc/v2ray/*.json.dpkg-dist
 fi
 
 cd /etc/v2ray
