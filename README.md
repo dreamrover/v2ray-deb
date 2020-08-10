@@ -9,6 +9,9 @@
 作为服务端时，安装完成后自动生成的端口号为TCP端口号，同时也是基于UDP的mKCP的端口号，UUID相同，您可以在与此服务端连接的客户端使用TCP或mKCP，但不建议您使用m[KCP](https://github.com/skywind3000/kcp)，因为用了之后此端口和IP很快会被探测到进而被封，原因你懂的。另外，安装完成后服务端也默认支持基于UDP的[QUIC](https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9FUDP%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5)协议传输，端口号为前述自动生成的端口号加1，UUID相同，key也与UUID相同，同样不建议您使用QUIC，原因与mKCP相同，虽然这两个基于UDP的协议速度更快。
 
 服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC。客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息，inbounds中的本地socks5代理为1080端口，HTTP代理为8080端口；outbounds中的端口号和UUID与服务端相同。
+### 注意
+从v2ray 4.26.0版开始，v2ray已进入Debian 11 (Bullseye)官方源，使用apt-get upgrade命令会自动更新至官方源的版本，但实测发现此版本作为服务端时无法配置为同时监听多个端口，导致使用以前的配置文件无法启动v2ray。个人Debian官方源打包的v2ray非常糟糕，您可通过以下命令忽略Debian官方源的v2ray更新：
+* sudo apt-mark hold v2ray
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)：
 * wget https://github.com/dreamrover/v2ray-deb/releases/download/4.27.0/v2ray-4.27.0-amd64.deb
