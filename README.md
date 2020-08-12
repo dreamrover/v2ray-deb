@@ -10,7 +10,7 @@
 
 服务端的配置信息都保存在/etc/v2ray/server.json中，包含TCP/mKCP/QUIC。客户端的配置信息都保存在/etc/v2ray/client.json中，仅包含TCP的配置信息，inbounds中的本地socks5代理为1080端口，HTTP代理为8080端口；outbounds中的端口号和UUID与服务端相同。
 ### 注意
-从v2ray 4.26.0版开始，v2ray已进入Debian 11 (Bullseye)官方源，使用apt-get upgrade命令会自动更新至官方源的版本，但实测发现此版本作为服务端时无法配置为同时监听多个端口，导致使用以前的配置文件无法启动v2ray。个人Debian官方源打包的v2ray非常糟糕，您可通过以下命令忽略Debian官方源的v2ray更新：
+从v2ray 4.26.0版开始，v2ray已进入Debian 11 (Bullseye)官方源，使用apt-get upgrade命令会自动更新至官方源的版本，但实测发现此版本作为服务端时无法配置为同时监听多个端口，导致使用以前的配置文件无法启动v2ray。个人认为Debian官方源打包的v2ray非常糟糕，您可通过以下命令忽略Debian官方源的v2ray更新：
 * sudo apt-mark hold v2ray
 
 v2ray尚未进入Ubuntu官方源，Ubuntu用户无需运行上述命令。
