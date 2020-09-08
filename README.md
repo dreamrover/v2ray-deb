@@ -16,12 +16,12 @@
 v2ray尚未进入Ubuntu官方源，Ubuntu用户无需运行上述命令。
 ## 安装
 本项目打包软件的版本号与官网保持一致，您可以直接下载[deb安装包](https://github.com/dreamrover/v2ray-deb/releases)：
-* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.27.0/v2ray-4.27.0-amd64.deb
+* wget https://github.com/dreamrover/v2ray-deb/releases/download/4.27.5/v2ray-4.27.5-amd64.deb
 
 并通过如下命令安装：
-* sudo dpkg -i v2ray-4.27.0-amd64.deb
+* sudo dpkg -i v2ray-4.27.5-amd64.deb
 
-首次安装后将显示**随机生成的端口号**和**用户ID（UUID）**，**额外ID（alterId）为64**。若已安装过旧版本，会提示是否替换之前的配置文件，如果选择“N”则不会重新生成端口号和UUID。将上述信息填入手机或PC端的v2ray客户端。
+首次安装后将显示**随机生成的端口号**和**用户ID（UUID）**，**额外ID（alterId）为0**。若已安装过旧版本，会提示是否替换之前的配置文件，如果选择“N”则不会重新生成端口号和UUID。将上述信息填入手机或PC端的v2ray客户端。
 
 上述配置信息都保存在/etc/v2ray/config.json中（此文件为符号链接，指向同目录下的server.json），安装完成后会自动启动v2ray服务。
 
