@@ -3,7 +3,7 @@
 old=`grep "^Version:" ./v2ray-linux-amd64/DEBIAN/control | cut -d ' ' -f2`
 version=$1
 name='v2ray'
-[[ $1 > '4.30' ]] && name='v2fly'
+[[ $1 > '4.28.2' ]] && name='v2fly'
 wget https://github.com/"${name}"/v2ray-core/releases/download/v"${version}"/v2ray-linux-64.zip || exit 1
 unzip v2ray-linux-64.zip -d v2ray-linux-64
 cp -v ./v2ray-linux-64/v2ray ./v2ray-linux-amd64/usr/bin/v2ray/
