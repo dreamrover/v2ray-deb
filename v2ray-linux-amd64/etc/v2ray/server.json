@@ -4,10 +4,10 @@
 {
   "log": {
     // By default, V2Ray writes access log to stdout.
-    // "access": "/path/to/access/log/file",
+    // "access": "/var/log/v2ray/access.log",
 
     // By default, V2Ray write error log to stdout.
-    // "error": "/path/to/error/log/file",
+    // "error": "/var/log/v2ray/error.log",
 
     // Log level, one of "debug", "info", "warning", "error", "none"
     "loglevel": "warning"
