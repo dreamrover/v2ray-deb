@@ -11,8 +11,6 @@ NoNewPrivileges=true
 ExecStart=/usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
 Restart=on-failure
 RestartPreventExitStatus=23
-RestartSec=5
-LogsDirectory=v2ray
 
 [Install]
 WantedBy=multi-user.target
